@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f7f8fb">
+  <title>eOS — Proof of Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --bg-alt: #eef6ff;
+      --card: #ffffff;
+      --text: #0f1724;
+      --muted: #6b7280;
+      --accent: #0f6dff;
+      --radius: 12px;
+      --container: 1100px;
+      --shadow-light: 0 6px 18px rgba(15,23,36,0.06);
+      --shadow-soft: 0 4px 12px rgba(15,23,36,0.04);
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background-color 280ms ease, color 280ms ease;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body { min-height: 100vh; }
+    a { color: var(--accent); text-decoration: none; }
+    .wrap { max-width: var(--container); margin: 32px auto; padding: 0 20px; box-sizing: border-box; }
+
+    /* header */
+    header { display:flex; align-items:center; justify-content:space-between; padding:18px 0; }
+    .brand { display:flex; align-items:center; gap:14px; }
+    .logo { width:56px; height:56px; border-radius:10px; background: linear-gradient(135deg,#0f6dff 0%,#37b1ff 100%); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:20px; }
+    .brand-text { display:flex; flex-direction:column; }
+    .brand-title { font-weight:700; }
+    .brand-subtitle { font-size:12px; color:var(--muted); }
+    nav ul { display:flex; gap:14px; list-style:none; margin:0; padding:0; }
+    nav a { padding:6px 10px; border-radius:8px; font-weight:600; color:var(--muted); }
+    nav a.primary { color:var(--text); }
+
+    /* hero */
+    .hero { display:grid; grid-template-columns: 1fr 380px; gap:28px; align-items:start; margin-top:18px; }
+    .hero h1 { font-size:36px; margin:0 0 12px 0; }
+    .lead { color:var(--muted); line-height:1.5; margin-bottom:18px; }
+    .cta-row { display:flex; gap:10px; flex-wrap:wrap; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; font-weight:600; background:var(--accent); color:#fff; }
+    .btn.ghost { background:transparent; border:1px solid var(--muted); color:var(--text); }
+
+    /* card / right column */
+    .card { background:var(--card); border-radius:var(--radius); padding:18px; box-shadow: var(--shadow-light); transition: background-color 280ms ease, box-shadow 280ms ease; }
+    .card-header { display:flex; gap:12px; align-items:center; margin-bottom:12px; }
+    .card-icon { width:56px; height:56px; border-radius:8px; background:var(--bg-alt); display:flex; align-items:center; justify-content:center; font-size:24px; }
+    .card-title { font-weight:700; }
+    .card-subtitle { font-size:13px; color:var(--muted); }
+    .stats { display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; }
+    .stat { flex:1; min-width:120px; }
+    .stat h3 { margin:0; font-size:14px; }
+    .stat p { margin:6px 0 0; color:var(--muted); }
+
+    /* features */
+    .features { display:grid; grid-template-columns: repeat(2, 1fr); gap:14px; margin-top:26px; }
+    .feature { background:var(--card); padding:18px; border-radius:10px; box-shadow: var(--shadow-soft); transition: background-color 280ms ease, box-shadow 280ms ease; }
+    .feature h4 { margin:0 0 6px; }
+    .feature p { margin:0; color:var(--muted); }
+
+    /* image placeholder */
+    .hero-art { width:100%; height:220px; border-radius:10px; background: linear-gradient(180deg, var(--bg-alt) 0%, var(--card) 100%); display:flex; align-items:center; justify-content:center; color:var(--text); font-weight:600; transition: background 280ms ease, color 280ms ease; }
+
+    footer { margin-top:36px; padding:18px 0; color:var(--muted); display:flex; justify-content:space-between; align-items:center; }
+
+    @media (max-width:880px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-art { height:180px; }
+      nav ul { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">eOS</div>
+        <div class="brand-text">
+          <div class="brand-title">eOS</div>
+          <div class="brand-subtitle">for the public sector</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="spec.html">Spec</a></li>
+          <li><a href="#usecases">Use Cases</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#planning">Planning</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Community-led Proof-of-Concept for a common free Operating System for the EU public sector</h1>
+          <p class="lead">eOS represents a trial implementation of a Linux operating system—built on Fedora and featuring the GNOME desktop—along with container technologies, designed to serve as a unified platform for public administration bodies</p>
+          <div class="features">
+            <div class="feature">
+              <h4>Unified</h4>
+              <p>An operating system developed from a shared foundation and equipped with standardized tools</p>
+            </div>
+            <div class="feature">
+              <h4>Secure</h4>
+              <p>An open-source operating system designed with privacy in mind—no data collection or external reporting</p>
+            </div>
+            <div class="feature">
+              <h4>Self-governed</h4>
+              <p>Tailored to meet the specific needs of European public sector institutions</p>
+            </div>
+            <div class="feature">
+              <h4>Polished</h4>
+              <p>Efficient and sustainable, running smoothly on both modern and older devices.</p>
+            </div>
+          </div>
+        </div>
+        <aside class="card">
+          <div class="card-header">
+            <div class="card-icon">👩‍💻</div>
+            <div>
+              <div class="card-title">What is eOS?</div>
+              <div class="card-subtitle">A proof-of-concept intended as a common Linux base for EU public sector</div>
+            </div>
+          </div>
+          
+          
+          
+                      
+            <style>
+            .hero-art img {
+                width: 300px;   /* adjust as needed */
+                height: auto;   /* maintain aspect ratio */
+            }
+            </style>
+
+            <div class="hero-art">
+                <img src="imagine.jpg" alt="Diagram" />
+            </div>
+          
+          
+          
+          
+          
+          <div class="stats">
+            <div class="stat"><h3>Partners</h3><p>N/A Yet</p></div>
+            <div class="stat"><h3>License</h3><p>MIT</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="whatiseos" style="margin-top:40px">
+        <h2>What is eOS?</h2>
+        <p><strong>eOS is not a project of the European Union, but it should be.</strong></p>
+        <p>Currently, eOS functions as a trial implementation of a Fedora Linux system, equipped with KDE Plasma and containerized tools, tailored for public administration use. However, its principles and architecture could also benefit organizations with similar or less stringent technical requirements.</p>
+        <p>Although it bears the name, eOS isn’t actually a new operating system. With over 250 Linux distributions already listed on DistroWatch—and countless more variations not even included—eOS offers something distinct:</p>
+        <ul>
+          <li>a common Linux OS as a base for all EU OS users with options to layer on top modifications (national layer, regional or sector-specific layer, organisation-specific layer)</li>
+          <li>a common desktop environment</li>
+          <li>a common method to manage
+            <ul>
+              <li>users and their data</li>
+              <li>software</li>
+              <li>devices</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div>Made with care in Bucharest by Michael Grigore</div>
+      <div style="font-size:13px;color:var(--muted)">Released under MIT</div>
+    </footer>
+  </div>
+</body>
+</html>
+
