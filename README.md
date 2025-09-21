@@ -44,7 +44,7 @@ For technical details like architecture diagrams and deployment notes, check the
 ## Project Info
 
 - **Partners**: B1 Systems, ATIX, Hack Days, and more to come  
-- **License**: MIT & EUPL-1.2  
+- **License**: MIT
 - **Author**: Michael Grigore (made with care in Bucharest )  
 
 ---
