@@ -1,7 +1,7 @@
 # eOS — Proof of Concept
 
 eOS is a community-driven proof-of-concept for a **common, free operating system for the European public sector**.  
-It’s based on **Fedora 42**, ships with **GNOME as the default desktop** (KDE Plasma is also tested), and comes with **container tools (Podman)** baked in.  
+It’s based on **Fedora 42**, ships with **GNOME as the default desktop** (KDE is trash), and comes with **container tools (Podman)** baked in.  
 
 The idea isn’t to reinvent Linux, but to offer a **ready-to-go setup for public administrations** that is secure, sustainable, and community-governed.
 
