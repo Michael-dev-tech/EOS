@@ -53,24 +53,6 @@ Think of it as a **template OS**: reliable, boring in a good way, and easy to bu
 
 ---
 
-## Installation Guide
-
-### Step 1 — Get the ISO
-Download the latest eOS image (link coming soon).  
-
-### Step 2 — Make a Bootable USB
-- **Windows:** Rufus or Balena Etcher  
-- **Linux/macOS:** `dd` works, but Etcher is easier  
-
-### Step 3 — Install
-1. Boot from USB (F12/F2/ESC at startup)  
-2. Try the live session first  
-3. Launch the installer:
-   - Pick language, keyboard, and disk setup  
-   - Let it install (5–10 minutes)  
-
----
-
 ## What Works Out of the Box?
 
 - Graphics: Intel / AMD / NVIDIA (extra drivers may be needed for NVIDIA)  
