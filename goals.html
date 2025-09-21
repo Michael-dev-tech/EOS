@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>eOS — Goals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #0f1724;
+      --muted: #6b7280;
+      --accent: #0f6dff;
+      --radius: 12px;
+      --container: 1100px;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box;}
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);}
+    a{color:var(--accent);text-decoration:none;}
+    .wrap{max-width:var(--container);margin:32px auto;padding:0 20px;}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+    .brand{display:flex;align-items:center;gap:14px;}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#0f6dff 0%,#37b1ff 100%);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;}
+    .brand-text{display:flex;flex-direction:column;}
+    .brand-title{font-weight:700;}
+    .brand-subtitle{font-size:12px;color:var(--muted);}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0;}
+    nav a{padding:6px 10px;border-radius:8px;font-weight:600;color:var(--muted);}
+    nav a.primary{color:var(--text);}
+    main h2{font-size:24px;margin-top:24px;}
+    main h3{font-size:20px;margin-top:20px;}
+    main p{font-size:16px; color: var(--text); margin-bottom:12px;}
+    main ul{margin-top:8px;margin-bottom:16px;padding-left:20px;color:var(--text);}
+    main li{margin-bottom:6px;}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:600;background:var(--accent);color:#fff;text-decoration:none;margin-top:10px;}
+    footer{margin-top:36px;padding:18px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center;}
+    @media (max-width:880px){nav ul{display:none;}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">eOS</div>
+        <div class="brand-text">
+          <div class="brand-title">eOS</div>
+          <div class="brand-subtitle">for the public sector</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="goals.html" class="primary">Goals</a></li>
+          <li><a href="spec.html">Spec</a></li>
+          <li><a href="index.html#usecases">Use Cases</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#planning">Planning</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Goals</h2>
+
+      <h3>Motivation</h3>
+      <p>eOS aims to provide a standardized, secure, and maintainable Linux-based operating system for the EU public sector. The motivation behind the project is to:</p>
+      <ul>
+        <li>Provide a common base OS for EU public organizations with the ability to add specific layers.</li>
+        <li>Enable a unified desktop environment for easier management and interoperability.</li>
+        <li>Improve transparency, reduce costs, and promote open standards.</li>
+        <li>Foster collaboration across European public administrations and free software communities.</li>
+      </ul>
+
+      <h3>Next Steps</h3>
+      <ul>
+        <li>Develop an atomic base OS with layered architecture for modular deployment.</li>
+        <li>Test installations on various public sector devices.</li>
+        <li>Document user, software, and device management processes.</li>
+        <li>Engage early adopter organizations for proof-of-concept deployment.</li>
+        <li>Encourage hosting and support on official EU code platforms.</li>
+      </ul>
+
+      <h3>Similar Projects</h3>
+      <ul>
+        <li>Turku Linux (active - municipal use)</li>
+        <li>GendBuntu (ongoing)</li>
+        <li>Suse Public Sector (active)</li>
+        <li>Linux Plus 1 (in preparation)</li>
+        <li>Scientific Linux (EOL 2024)</li>
+        <li>Linux for Barcelona (no updates)</li>
+      </ul>
+
+      <h3>Project Scope</h3>
+      <p>eOS focuses on deploying a Linux-based OS in typical public sector organizations. Out of scope:</p>
+      <ul>
+        <li>Developing a new Linux distribution from scratch.</li>
+        <li>Deployment outside public/corporate environments.</li>
+        <li>Deployment on smartphones, tablets, or non-standard devices.</li>
+        <li>Emulating Windows or Android applications.</li>
+      </ul>
+      <p>For demonstration, Firefox and LibreOffice may be included in the proof-of-concept setup.</p>
+    </main>
+
+    <footer>
+      <div>Made with care in Bucharest by Michael Grigore</div>
+      <div style="font-size:13px;color:var(--muted)">Released under MIT</div>
+    </footer>
+  </div>
+</body>
+</html>
+
