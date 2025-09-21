@@ -1,54 +1,81 @@
 # eOS — Proof of Concept
 
 eOS is a community-driven proof-of-concept for a **common, free operating system for the European public sector**.  
-It’s based on **Fedora Linux**, comes with **GNOME (and KDE Plasma for testing)**, and integrates container technologies. The goal is simple: give public institutions a modern, reliable, and open platform they can all share.
+It’s based on **Fedora 42**, ships with **GNOME as the default desktop** (KDE Plasma is also tested), and comes with **container tools (Podman)** baked in.  
+
+The idea isn’t to reinvent Linux, but to offer a **ready-to-go setup for public administrations** that is secure, sustainable, and community-governed.
 
 ---
 
 ## Why eOS?
 
-There are hundreds of Linux distributions out there, but the public sector in Europe still lacks a **common baseline**.  
-eOS tries to answer that with:
+There are countless Linux distributions, but none designed as a **shared baseline for the EU public sector**. eOS proposes:
 
 - **A shared foundation** — one Linux base for everyone  
-- **Layered flexibility** — national, regional, or sector-specific add-ons on top  
-- **Privacy by design** — no tracking, no hidden reporting  
-- **Sustainability** — runs well on new machines and doesn’t abandon older hardware  
+- **Layered flexibility** — national, regional, or sector-specific add-ons  
+- **Privacy by design** — no telemetry, no hidden reporting  
+- **Sustainability** — efficient on new hardware, still usable on older machines  
 
-It’s not “yet another distro” — it’s more of a **proposal for collaboration**.
+It’s less about “yet another distro” and more about **collaboration around a common standard**.
 
 ---
 
 ## Features at a Glance
 
-- **Unified**: standardized tools, common desktop  
-- **Secure**: open-source, transparent, no data collection  
-- **Self-governed**: designed for EU public institutions, not corporations  
-- **Polished**: efficient, usable, works across device generations  
+- **Unified**: standardized tools and a common desktop experience  
+- **Secure**: open-source, transparent, and privacy-friendly  
+- **Self-governed**: built for institutions, not vendors  
+- **Polished**: smooth on both modern and legacy devices  
 
 ---
 
-## Goals
+## What’s This About?
 
-The bigger picture behind eOS:
+eOS isn’t a brand-new operating system. It’s essentially **Fedora 42 + GNOME**, preconfigured with sane defaults and container tools, tailored for governments, NGOs, and organizations that want a **ready-to-deploy Linux environment**.
 
-- Create a **common Linux base** for the EU public sector  
-- Provide a **clear governance model** so institutions can steer development  
-- Encourage **interoperability and open standards**  
-- Keep IT infrastructure **cost-effective and future-proof**  
-
-For technical details like architecture diagrams and deployment notes, check the project’s website (this repo focuses more on structure and early concept).
+Think of it as a **template OS**: reliable, boring in a good way, and easy to build upon.
 
 ---
 
-## Project Info
+## System Requirements
 
-- **Partners**: B1 Systems, ATIX, Hack Days, and more to come  
-- **License**: MIT
-- **Author**: Michael Grigore (made with care in Bucharest )  
+### Minimum (will run, but not fun)
+- CPU: Any 1 GHz+ from the last 10 years  
+- RAM: 2 GB (realistically, 4 GB is the baseline)  
+- Storage: 15 GB (SSD highly recommended)  
+- Display: 1024×768  
+
+### Recommended (smooth experience)
+- CPU: Modern dual-core, 2 GHz+  
+- RAM: 4–8 GB  
+- Storage: 25 GB+ on SSD  
+- Display: 1080p or better  
 
 ---
 
-## Getting Started
+## Installation Guide
 
-Right now, this is still a **proof-of-concept**, not a finished product.  
+### Step 1 — Get the ISO
+Download the latest eOS image (link coming soon).  
+
+### Step 2 — Make a Bootable USB
+- **Windows:** Rufus or Balena Etcher  
+- **Linux/macOS:** `dd` works, but Etcher is easier  
+
+### Step 3 — Install
+1. Boot from USB (F12/F2/ESC at startup)  
+2. Try the live session first  
+3. Launch the installer:
+   - Pick language, keyboard, and disk setup  
+   - Let it install (5–10 minutes)  
+
+---
+
+## What Works Out of the Box?
+
+- Graphics: Intel / AMD / NVIDIA (extra drivers may be needed for NVIDIA)  
+- Networking: Wi-Fi & Ethernet  
+- Storage: SATA, NVMe, USB drives  
+
+---
+
